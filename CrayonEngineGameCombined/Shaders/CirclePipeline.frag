@@ -11,8 +11,24 @@ layout( set = 0, binding = 0, std140 ) uniform UniformBufferObject
 	mat4 view;
 	mat4 proj;
 } ubo;
+
 layout( set = 1, binding = 0 ) uniform sampler2D texSampler[];
+
 layout( set = 2, binding = 0, rgba8 ) readonly uniform image2D stagingImages[];
+
+
+struct Sprite {
+    vec2 offset;       // Position offset in model space
+    vec2 origin;       // Texture coordinate origin
+    vec2 extent;       // Texture coordinate extent
+    vec2 scale;        // Scaling factor for the sprite
+    uint textureID;    // Index into the texture sampler array
+    float rotation;    // Rotation angle in radians
+};
+
+layout( set = 3, binding =0, std140) readonly buffer SpriteBuffer {Sprite sprites[];} spriteBuffer;
+
+
 //DESCRIPTOR INFORMATION ENDS
 
 

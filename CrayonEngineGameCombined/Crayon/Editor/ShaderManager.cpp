@@ -145,6 +145,11 @@ layout( set = 3, binding =0, std140) readonly buffer SpriteBuffer {Sprite sprite
 		CRAYON_ASSERT( vulkanSdk!= nullptr && "Could not find VULKAN_SDK environment variable. Is the Vulkan SDK installed? If so, has the VULKAN_SDK environment variable not been created?");
 
 		std::cout << "Vulkan SDK found" << std::endl;
+
+		if ( !fs::exists( spirvDirectoryPath ) )
+		{
+			fs::create_directories( spirvDirectoryPath );
+		}
 		
 		//get the path to the glslc shader-code-to-spirv compiler within the Vulkan SDK directory
 		std::string glslc = vulkanSdk + std::string("/Bin/glslc.exe");
