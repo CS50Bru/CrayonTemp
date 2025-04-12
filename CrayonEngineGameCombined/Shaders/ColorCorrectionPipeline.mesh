@@ -1,0 +1,38 @@
+// STANDARD HEADER BEGINS
+#version 450
+#extension GL_EXT_mesh_shader : require
+#extension GL_EXT_nonuniform_qualifier : enable
+// STANDARD HEADER ENDS
+
+//DESCRIPTOR INFORMATION BEGINS
+// Define our DescriptorSet inputs
+layout( set = 0, binding = 0, std140 ) uniform UniformBufferObject
+{
+	mat4 model;
+	mat4 view;
+	mat4 proj;
+} ubo;
+layout( set = 1, binding = 0 ) uniform sampler2D texSampler[];
+layout( set = 2, binding = 0, rgba8 ) readonly uniform image2D stagingImages[];
+//DESCRIPTOR INFORMATION ENDS
+
+//specify number of workgroups
+layout(local_size_x = 1) in;
+
+//This tells the compiler (and later the driver) the maximum number of vertices and primitives that your shader might output. It’s like reserving enough space in the output buffers. The keyword triangles specifies that the primitives are triangles.
+layout(triangles, max_vertices = 4, max_primitives = 2) out;
+
+void main() {
+    // Make a simple triangle using the center and extent
+    gl_MeshVerticesEXT[0].gl_Position = vec4(-1.0, -1.0, 0.0, 1.0);//top-left
+    gl_MeshVerticesEXT[1].gl_Position = vec4(1.0, -1.0, 0.0, 1.0); //top-right
+    gl_MeshVerticesEXT[2].gl_Position = vec4(-1.0, 1.0, 0.0, 1.0);//bottom-left
+    gl_MeshVerticesEXT[3].gl_Position = vec4(1.0, 1.0, 0.0, 1.0); //bottom-right
+
+    //This call sets the actual number of vertices and primitives that you are outputting for this invocation of the mesh shader. It must be within the limits you declared in the layout. This is necessary because, in a more dynamic scenario, you might output fewer vertices or primitives than the maximum allowed.
+    SetMeshOutputsEXT(4, 2);
+
+    //this is where you specify how you actually want to tie those vertices together into a primitive
+    gl_PrimitiveTriangleIndicesEXT[0] = uvec3(0, 1, 2);
+    gl_PrimitiveTriangleIndicesEXT[1] = uvec3(3,2,1);
+}

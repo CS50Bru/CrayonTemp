@@ -1,0 +1,56 @@
+// STANDARD HEADER BEGINS
+#version 450
+#extension GL_EXT_mesh_shader : require
+#extension GL_EXT_nonuniform_qualifier : enable
+// STANDARD HEADER ENDS
+
+
+//DESCRIPTOR INFORMATION BEGINS
+// Define our DescriptorSet inputs
+layout( set = 0, binding = 0, std140 ) uniform UniformBufferObject
+{
+	mat4 model;
+	mat4 view;
+	mat4 proj;
+} ubo;
+layout( set = 1, binding = 0 ) uniform sampler2D texSampler[];
+layout( set = 2, binding = 0, rgba8 ) readonly uniform image2D stagingImages[];
+//DESCRIPTOR INFORMATION ENDS
+
+layout(push_constant) uniform Push {
+    vec2 center;
+    vec2 extent;
+} push;
+
+// Specify the maximum number of vertices and primitives that this mesh shader will output.
+layout(max_vertices = 4, max_primitives = 2) out;
+
+
+layout(triangles) out;
+
+void main()
+{
+    vec2 vertices[4];
+    vec2 halfExtent= push.extent*0.5;
+    vertices[0] = push.center + vec2(-halfExtent.x, -halfExtent.y); // Top left
+    vertices[1] = push.center + vec2(halfExtent.x, -halfExtent.y);  // Top right
+    vertices[2] = push.center + vec2(-halfExtent.x, halfExtent.y);  // Bottom left
+    vertices[3] = push.center + vec2(halfExtent.x, halfExtent.y);   // Bottom right
+
+    // Transform and output each vertex
+    for (int i = 0; i < 4; i++) {
+        vec4 worldPos = vec4(vertices[i], 0.0, 1.0);
+        gl_MeshVerticesEXT[i].gl_Position = ubo.proj * ubo.view * worldPos;
+    }
+
+// Set the number of vertices and primitives we're actually using
+SetMeshOutputsEXT(4, 2);  // 4 vertices, 2 triangles
+
+// First triangle (CW)
+gl_PrimitiveTriangleIndicesEXT[0] = uvec3(0, 1, 2);
+
+// Second triangle
+gl_PrimitiveTriangleIndicesEXT[1] = uvec3(3,2,1);
+
+
+}

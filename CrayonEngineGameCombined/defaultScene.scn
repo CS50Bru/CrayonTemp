@@ -1,0 +1,35 @@
+- AnimationComponent:
+    columns: 2
+    rows: 1
+    frameDuration: 0.10000000000000001
+    shouldLoop: true
+  SpriteComponent:
+    textureIndex:
+      TexturePath: Textures\chopper.png
+    drawIndex: 0
+    uvRect:
+      origin:
+        x: 0.5
+        y: 0
+      extent:
+        x: 0.5
+        y: 1
+  TransformComponent:
+    location:
+      x: 721.815369
+      y: 438.524811
+    scale:
+      x: 2
+      y: 2
+    rotation: 0
+  RigidBodyComponent:
+    velocity:
+      x: -16.0095768
+      y: 1.29496634
+    acceleration:
+      x: -11.2304211
+      y: -6.54810095
+    netForce:
+      x: 0
+      y: 0
+    mass: 1

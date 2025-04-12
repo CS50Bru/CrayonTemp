@@ -1,0 +1,52 @@
+// STANDARD HEADER BEGINS
+#version 450
+#extension GL_EXT_mesh_shader : require
+#extension GL_EXT_nonuniform_qualifier : enable
+// STANDARD HEADER ENDS
+
+// Specify workgroup size
+layout(local_size_x = 1) in;
+
+// Specify output: 2 vertices, 1 line primitive
+layout(lines, max_vertices = 2, max_primitives = 1) out;
+
+//DESCRIPTOR INFORMATION BEGINS
+// Define our DescriptorSet inputs
+layout( set = 0, binding = 0, std140 ) uniform UniformBufferObject
+{
+	mat4 model;
+	mat4 view;
+	mat4 proj;
+} ubo;
+layout( set = 1, binding = 0 ) uniform sampler2D texSampler[];
+layout( set = 2, binding = 0, rgba8 ) readonly uniform image2D stagingImages[];
+//DESCRIPTOR INFORMATION ENDS
+
+
+// Push constants for per-draw call data
+layout(push_constant) uniform Push
+{
+    vec2 start;
+    vec2 end;
+} push;
+
+void main()
+{
+    // Generate model-space vertices
+    vec2 generatedModelSpaceVertices[2] = vec2[] (   
+        vec2(push.start), // Start point
+        vec2(push.end)    // End point
+    );
+
+    // Transform vertices and assign to output
+    for (int i = 0; i < 2; i++) {
+        vec4 modelSpacePosition = vec4(generatedModelSpaceVertices[i], 0.0, 1.0);
+        gl_MeshVerticesEXT[i].gl_Position = ubo.proj * ubo.view * modelSpacePosition;
+    }
+
+    // Set the number of vertices and primitives
+    SetMeshOutputsEXT(2, 1);
+
+    // Define the line primitive (connect vertex 0 to vertex 1)
+    gl_PrimitiveLineIndicesEXT[0] = uvec2(0, 1);
+}

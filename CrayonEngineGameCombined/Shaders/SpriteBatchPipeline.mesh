@@ -1,0 +1,146 @@
+// STANDARD HEADER BEGINS
+#version 450
+#extension GL_EXT_mesh_shader : require
+#extension GL_EXT_nonuniform_qualifier : enable
+#define CRAYON_MAX_VERTICES_PER_MESH_SHADER_WORKGROUP 256
+#define CRAYON_MAX_PRIMITIVES_PER_MESH_SHADER_WORKGROUP 256
+// STANDARD HEADER ENDS
+
+
+
+//DESCRIPTOR INFORMATION BEGINS
+// Define our DescriptorSet inputs
+layout( set = 0, binding = 0, std140 ) uniform UniformBufferObject
+{
+	mat4 model;
+	mat4 view;
+	mat4 proj;
+} ubo;
+
+layout( set = 1, binding = 0 ) uniform sampler2D texSampler[];
+
+layout( set = 2, binding = 0, rgba8 ) readonly uniform image2D stagingImages[];
+
+
+struct Sprite {
+    vec2 offset;       // Position offset in model space
+    vec2 origin;       // Texture coordinate origin
+    vec2 extent;       // Texture coordinate extent
+    vec2 scale;        // Scaling factor for the sprite
+    uint textureID;    // Index into the texture sampler array
+    float rotation;    // Rotation angle in radians
+};
+
+layout( set = 3, binding =0, std140) readonly buffer SpriteBuffer {Sprite sprites[];} spriteBuffer;
+
+
+//DESCRIPTOR INFORMATION ENDS
+
+#define THREADS_PER_WORKGROUP 32
+
+layout(local_size_x = THREADS_PER_WORKGROUP) in; // the number of threads we'll spin up per invocation: 32 is what NVIDIA likes, and AMD will put up with it, too
+layout(triangles, max_vertices = CRAYON_MAX_VERTICES_PER_MESH_SHADER_WORKGROUP, max_primitives = CRAYON_MAX_PRIMITIVES_PER_MESH_SHADER_WORKGROUP) out;
+
+// Define our push constant input
+layout(push_constant) uniform BufferRange
+{
+    uint start;
+    uint spriteCount;
+} bufferRange;
+
+// Define our outputs
+layout(location = 0) out vec2 fragTexCoord[]; // Note: array syntax for per-vertex output
+layout(location =1)flat out uint textureId[];
+
+void main()
+{
+
+//4 vertices per sprites
+    uint spritesPerWorkgroup = CRAYON_MAX_VERTICES_PER_MESH_SHADER_WORKGROUP/4;
+
+    //if we have 9 sprites per workgroup and 10 threads, we want that to come out as 1 sprite per workgroup, and we'll mask out the last.
+    //If we have 10 sprites per workgroup and 10 threads, we also want just 1 sprite per workgroup, hence the -1.
+    uint spritesPerThread = ((spritesPerWorkgroup-1)/THREADS_PER_WORKGROUP)+1;
+
+//work out how many sprites 'have already been processed' by previous workgroups, and how many are left to process
+    uint remainingSprites = bufferRange.spriteCount - (gl_WorkGroupID.x * spritesPerWorkgroup);
+
+// clamp the 'remaining sprites' to the number a single workgroup can actually process
+    uint spritesForCurrentWorkgroup = min(spritesPerWorkgroup, remainingSprites);
+
+
+    uint workgroupSpriteStart = bufferRange.start +  gl_WorkGroupID.x * spritesPerWorkgroup;
+    uint threadSpriteStart = workgroupSpriteStart + gl_LocalInvocationID.x * spritesPerThread;
+
+    uint threadVertexBufferStart =  gl_LocalInvocationID.x * spritesPerThread * 4;
+    uint threadTriangleBufferStart = gl_LocalInvocationID.x * spritesPerThread * 2;
+
+    uint workgroupTotalOutputVertices = 4 * spritesForCurrentWorkgroup;
+    uint workgroupTotalOutputPrimitives = 2* spritesForCurrentWorkgroup;
+
+    if (gl_LocalInvocationID.x == 0) 
+    {
+            SetMeshOutputsEXT(workgroupTotalOutputVertices, workgroupTotalOutputPrimitives);
+    }
+
+    for (uint i =0; i< spritesPerThread; i++) // 'for each sprite'
+    {
+        Sprite sprite = spriteBuffer.sprites[threadSpriteStart + i];
+
+        vec2 halfExtent = 0.5 * sprite.extent * sprite.scale; // Incorporate scale like in vertex shader
+        vec2 textureSize = vec2(textureSize(texSampler[sprite.textureID], 0));
+        vec2 scaledExtent = sprite.extent * sprite.scale * textureSize;
+
+        // Calculate vertex positions (model space, with offset and rotation if needed)
+        mat4 rotationMatrix = mat4(
+            cos(sprite.rotation), -sin(sprite.rotation), 0, 0,
+            sin(sprite.rotation), cos(sprite.rotation), 0, 0,
+            0, 0, 1, 0,
+            0, 0, 0, 1
+        );
+
+        vec4 vertices[4] = vec4[](
+            vec4(-0.5 * scaledExtent.x, -0.5 * scaledExtent.y, 0.0, 1.0), // top-left
+            vec4(0.5 * scaledExtent.x, -0.5 * scaledExtent.y, 0.0, 1.0),  // top-right
+            vec4(0.5 * scaledExtent.x, 0.5 * scaledExtent.y, 0.0, 1.0),   // bottom-right
+            vec4(-0.5 * scaledExtent.x, 0.5 * scaledExtent.y, 0.0, 1.0)   // bottom-left
+        );
+
+        // Apply rotation and offset
+        uint outputVertexBufferStart = threadVertexBufferStart + (i * 4);
+        uint outputTriangleBufferStart = threadTriangleBufferStart + (i * 2);
+
+        if (outputVertexBufferStart < workgroupTotalOutputVertices)
+        {
+            for (int j = 0; j < 4; j++)  // 'for each vertex in the sprite'
+            {
+                vertices[j] = rotationMatrix * vertices[j] + vec4(sprite.offset, 0.0, 0.0);
+                gl_MeshVerticesEXT[outputVertexBufferStart + j].gl_Position = ubo.proj * ubo.view * vertices[j];
+            }
+
+            // Define texture coordinates (matching vertex shader logic)
+            vec2 uvCoordinates[4] = vec2[] (
+            vec2(sprite.origin),                          // top-left
+            vec2(sprite.origin.x + sprite.extent.x,  sprite.origin.y), // top-right
+            vec2(sprite.origin.x + sprite.extent.x,  sprite.origin.y + sprite.extent.y), // bottom-right
+            vec2(sprite.origin.x,  sprite.origin.y + sprite.extent.y)  // bottom-left
+            );
+
+         // Assign texture coordinates to each vertex
+            for (int j = 0; j < 4; j++) 
+            {
+            fragTexCoord[outputVertexBufferStart + j] = uvCoordinates[j];
+            textureId[outputVertexBufferStart + j] =sprite.textureID;
+            }
+
+   
+
+            // Define the two triangles
+            gl_PrimitiveTriangleIndicesEXT[outputTriangleBufferStart] = uvec3(outputVertexBufferStart+ 0,outputVertexBufferStart+ 1,outputVertexBufferStart+ 3); // First triangle: top-left, top-right, bottom-left
+            gl_PrimitiveTriangleIndicesEXT[outputTriangleBufferStart+1] = uvec3(outputVertexBufferStart+1, outputVertexBufferStart+2, outputVertexBufferStart+3); // Second triangle: top-right, bottom-right, bottom-left
+    
+        }
+
+    }
+
+}

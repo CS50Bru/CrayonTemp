@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Crayon">
+      <UniqueIdentifier>{91D26EAC-7D74-9982-662F-ADD6527020D3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\ComponentsAndSystems">
+      <UniqueIdentifier>{F12A899E-5D38-B784-E61E-B36F522B833B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\ComponentsAndSystems\Components">
+      <UniqueIdentifier>{66B78236-5209-5A26-3B28-97362719730F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\ComponentsAndSystems\Systems">
+      <UniqueIdentifier>{F8E113A3-649B-7E4D-EDFA-982759B334BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Core">
+      <UniqueIdentifier>{893937D2-F5EE-AFC7-7EE3-A99EEA97A6CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Core\CoreTypes">
+      <UniqueIdentifier>{3662392A-A2CE-F424-6BC2-8C82D7ED168D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Core\Events">
+      <UniqueIdentifier>{4DB16D31-3995-2E87-A2F5-28DA8EF81809}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Core\GUI">
+      <UniqueIdentifier>{1DD5F526-8960-63EB-9271-E6DFFE7BBFEB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Core\LoggingAndProfiling">
+      <UniqueIdentifier>{7C394BBD-E81C-5AFD-F11F-88395D82204E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Core\Reflection">
+      <UniqueIdentifier>{A348054F-8F42-2EA1-78AF-C4B16448940D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Core\Timing">
+      <UniqueIdentifier>{20218453-0C05-45A9-7565-3FFC61682F2B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Core\WindowAndInput">
+      <UniqueIdentifier>{B3A341C4-9FB3-ED94-086D-52B3F49BDC2D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Editor">
+      <UniqueIdentifier>{A762CA40-1323-4677-DC5D-8FF448DD8A53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Libraries">
+      <UniqueIdentifier>{3D6FD5E6-2968-F438-529A-D9BD3EF2D344}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Libraries\glm">
+      <UniqueIdentifier>{0C506026-F8DE-E9EF-A1FD-FDEA8D6BFA95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Libraries\glm\detail">
+      <UniqueIdentifier>{4E4296F2-BA4F-C4D8-4336-C0C3AF42908F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Libraries\glm\ext">
+      <UniqueIdentifier>{6CF9FCFE-581E-4C7F-8169-310F6DED4A9D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Libraries\glm\gtc">
+      <UniqueIdentifier>{5901FDFE-4526-4C7F-6E71-310F5AF54A9D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Libraries\glm\gtx">
+      <UniqueIdentifier>{6E01FDFE-5A26-4C7F-8371-310F6FF54A9D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Libraries\glm\simd">
+      <UniqueIdentifier>{E893A3DE-5456-D768-9D06-66F50908B046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Libraries\imgui">
+      <UniqueIdentifier>{6736D93F-5330-0292-3C9D-98A2283668FE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Libraries\stb">
+      <UniqueIdentifier>{15846026-0113-EAEF-AA31-FEEA969FFA95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Libraries\vma">
+      <UniqueIdentifier>{F08F6026-DC1E-EAEF-853D-FEEA71ABFA95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Subsystems">
+      <UniqueIdentifier>{02C7B0D8-6EDD-AE6E-B754-3A9023AA7FF6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Subsystems\Audio">
+      <UniqueIdentifier>{830E5B2E-EF45-A3C5-F84F-07E96406CABE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Subsystems\ECS">
+      <UniqueIdentifier>{4C6CFBC1-B8D8-B6BC-81CC-4E1AEDF7D824}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crayon\Subsystems\Rendering">
+      <UniqueIdentifier>{CFBA42D8-3BC8-70BE-C4AE-6CA930BB3C75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{7FA9857C-6BE0-860D-14CD-6C1000E3020F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Components">
+      <UniqueIdentifier>{3441F2CD-A0CC-5F92-A9DD-E28615E8BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Enums">
+      <UniqueIdentifier>{F6EE45E1-E2A6-872E-4BAE-608A3785221F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Events">
+      <UniqueIdentifier>{83D08B0A-EF85-0400-787A-FED6E42EFB03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Systems">
+      <UniqueIdentifier>{860EB599-7271-443E-1BF7-7CF4073910C1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Components\AnimationComponent.h">
+      <Filter>Crayon\ComponentsAndSystems\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Components\BoxCollider.h">
+      <Filter>Crayon\ComponentsAndSystems\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Components\HealthComponent.h">
+      <Filter>Crayon\ComponentsAndSystems\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Components\InputComponent.h">
+      <Filter>Crayon\ComponentsAndSystems\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Components\LocomotionComponent.h">
+      <Filter>Crayon\ComponentsAndSystems\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Components\QuadWithColor.h">
+      <Filter>Crayon\ComponentsAndSystems\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Components\RigidBodyComponent.h">
+      <Filter>Crayon\ComponentsAndSystems\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Components\SoundComponent.h">
+      <Filter>Crayon\ComponentsAndSystems\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Components\SpriteComponent.h">
+      <Filter>Crayon\ComponentsAndSystems\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Components\TransformComponent.h">
+      <Filter>Crayon\ComponentsAndSystems\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Components\UISpriteComponent.h">
+      <Filter>Crayon\ComponentsAndSystems\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Systems\AnimationSystem.h">
+      <Filter>Crayon\ComponentsAndSystems\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Systems\AudioSystem.h">
+      <Filter>Crayon\ComponentsAndSystems\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Systems\CollisionSystem.h">
+      <Filter>Crayon\ComponentsAndSystems\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Systems\PhysicsSystem.h">
+      <Filter>Crayon\ComponentsAndSystems\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\ComponentsAndSystems\Systems\RendererSystem.h">
+      <Filter>Crayon\ComponentsAndSystems\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\Core.h">
+      <Filter>Crayon\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\CoreTypes\Bitset.h">
+      <Filter>Crayon\Core\CoreTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\CoreTypes\MVP.h">
+      <Filter>Crayon\Core\CoreTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\CoreTypes\PagedArray.h">
+      <Filter>Crayon\Core\CoreTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\CoreTypes\Rect.h">
+      <Filter>Crayon\Core\CoreTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\CoreTypes\SerializableEnum.h">
+      <Filter>Crayon\Core\CoreTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\CoreTypes\SparseSet.h">
+      <Filter>Crayon\Core\CoreTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\Events\CollisionEvent.h">
+      <Filter>Crayon\Core\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\Events\Event.h">
+      <Filter>Crayon\Core\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\GUI\GUIManager.h">
+      <Filter>Crayon\Core\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\LoggingAndProfiling\Logger.h">
+      <Filter>Crayon\Core\LoggingAndProfiling</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\LoggingAndProfiling\Profiler.h">
+      <Filter>Crayon\Core\LoggingAndProfiling</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\Paths.h">
+      <Filter>Crayon\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\Reflection\ReflectionHelpers.h">
+      <Filter>Crayon\Core\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\Reflection\ReflectionSystem.h">
+      <Filter>Crayon\Core\Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\Timing\Timer.h">
+      <Filter>Crayon\Core\Timing</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\WindowAndInput\InputEvent.h">
+      <Filter>Crayon\Core\WindowAndInput</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\WindowAndInput\InputManager.h">
+      <Filter>Crayon\Core\WindowAndInput</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\WindowAndInput\KeyCode.h">
+      <Filter>Crayon\Core\WindowAndInput</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\WindowAndInput\Window.h">
+      <Filter>Crayon\Core\WindowAndInput</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Core\WindowAndInput\WindowsInputMessage.h">
+      <Filter>Crayon\Core\WindowAndInput</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Editor\Editor.h">
+      <Filter>Crayon\Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Editor\ShaderManager.h">
+      <Filter>Crayon\Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Editor\YAMLHelpers.h">
+      <Filter>Crayon\Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\GameInstance.h">
+      <Filter>Crayon</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\common.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\_features.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\_fixes.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\_noise.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\_swizzle.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\_swizzle_func.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\_vectorize.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\compute_common.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\compute_vector_relational.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\qualifier.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\setup.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_float.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_half.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_mat2x2.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_mat2x3.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_mat2x4.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_mat3x2.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_mat3x3.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_mat3x4.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_mat4x2.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_mat4x3.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_mat4x4.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_quat.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_vec1.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_vec2.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_vec3.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\detail\type_vec4.hpp">
+      <Filter>Crayon\Libraries\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\exponential.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_clip_space.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_common.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double2x2.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double2x2_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double2x3.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double2x3_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double2x4.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double2x4_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double3x2.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double3x2_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double3x3.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double3x3_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double3x4.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double3x4_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double4x2.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double4x2_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double4x3.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double4x3_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double4x4.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_double4x4_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float2x2.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float2x2_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float2x3.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float2x3_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float2x4.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float2x4_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float3x2.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float3x2_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float3x3.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float3x3_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float3x4.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float3x4_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float4x2.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float4x2_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float4x3.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float4x3_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float4x4.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_float4x4_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_projection.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_relational.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\matrix_transform.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\quaternion_common.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\quaternion_double.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\quaternion_double_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\quaternion_exponential.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\quaternion_float.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\quaternion_float_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\quaternion_geometric.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\quaternion_relational.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\quaternion_transform.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\quaternion_trigonometric.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\scalar_common.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\scalar_constants.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\scalar_int_sized.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\scalar_integer.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\scalar_relational.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\scalar_uint_sized.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\scalar_ulp.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_bool1.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_bool1_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_bool2.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_bool2_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_bool3.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_bool3_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_bool4.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_bool4_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_common.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_double1.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_double1_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_double2.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_double2_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_double3.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_double3_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_double4.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_double4_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_float1.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_float1_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_float2.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_float2_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_float3.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_float3_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_float4.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_float4_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_int1.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_int1_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_int2.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_int2_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_int3.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_int3_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_int4.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_int4_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_integer.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_relational.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_uint1.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_uint1_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_uint2.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_uint2_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_uint3.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_uint3_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_uint4.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_uint4_precision.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\ext\vector_ulp.hpp">
+      <Filter>Crayon\Libraries\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\fwd.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\geometric.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\glm.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\bitfield.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\color_space.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\constants.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\epsilon.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\integer.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\matrix_access.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\matrix_integer.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\matrix_inverse.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\matrix_transform.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\noise.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\packing.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\quaternion.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\random.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\reciprocal.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\round.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\type_aligned.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\type_precision.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\type_ptr.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\ulp.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtc\vec1.hpp">
+      <Filter>Crayon\Libraries\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\associated_min_max.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\bit.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\closest_point.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\color_encoding.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\color_space.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\color_space_YCoCg.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\common.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\compatibility.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\component_wise.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\dual_quaternion.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\easing.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\euler_angles.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\extend.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\extended_min_max.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\exterior_product.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\fast_exponential.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\fast_square_root.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\fast_trigonometry.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\functions.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\gradient_paint.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\handed_coordinate_space.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\hash.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\integer.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\intersect.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\io.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\log_base.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\matrix_cross_product.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\matrix_decompose.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\matrix_factorisation.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\matrix_interpolation.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\matrix_major_storage.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\matrix_operation.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\matrix_query.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\matrix_transform_2d.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\mixed_product.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\norm.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\normal.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\normalize_dot.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\number_precision.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\optimum_pow.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\orthonormalize.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\perpendicular.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\polar_coordinates.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\projection.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\quaternion.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\range.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\raw_data.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\rotate_normalized_axis.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\rotate_vector.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\scalar_multiplication.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\scalar_relational.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\spline.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\std_based_type.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\string_cast.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\texture.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\transform.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\transform2.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\type_aligned.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\type_trait.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\vec_swizzle.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\vector_angle.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\vector_query.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\gtx\wrap.hpp">
+      <Filter>Crayon\Libraries\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\integer.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\mat2x2.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\mat2x3.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\mat2x4.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\mat3x2.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\mat3x3.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\mat3x4.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\mat4x2.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\mat4x3.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\mat4x4.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\matrix.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\packing.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\simd\common.h">
+      <Filter>Crayon\Libraries\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\simd\exponential.h">
+      <Filter>Crayon\Libraries\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\simd\geometric.h">
+      <Filter>Crayon\Libraries\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\simd\integer.h">
+      <Filter>Crayon\Libraries\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\simd\matrix.h">
+      <Filter>Crayon\Libraries\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\simd\neon.h">
+      <Filter>Crayon\Libraries\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\simd\packing.h">
+      <Filter>Crayon\Libraries\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\simd\platform.h">
+      <Filter>Crayon\Libraries\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\simd\trigonometric.h">
+      <Filter>Crayon\Libraries\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\simd\vector_relational.h">
+      <Filter>Crayon\Libraries\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\trigonometric.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\vec2.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\vec3.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\vec4.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\glm\vector_relational.hpp">
+      <Filter>Crayon\Libraries\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\imgui\imconfig.h">
+      <Filter>Crayon\Libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\imgui\imgui.h">
+      <Filter>Crayon\Libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\imgui\imgui_impl_vulkan.h">
+      <Filter>Crayon\Libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\imgui\imgui_impl_win32.h">
+      <Filter>Crayon\Libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\imgui\imgui_internal.h">
+      <Filter>Crayon\Libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\imgui\imstb_rectpack.h">
+      <Filter>Crayon\Libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\imgui\imstb_textedit.h">
+      <Filter>Crayon\Libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\imgui\imstb_truetype.h">
+      <Filter>Crayon\Libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\stb\stb_image.h">
+      <Filter>Crayon\Libraries\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Libraries\vma\vk_mem_alloc.h">
+      <Filter>Crayon\Libraries\vma</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Subsystems\Audio\AudioHandle.h">
+      <Filter>Crayon\Subsystems\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Subsystems\Audio\AudioPlayer.h">
+      <Filter>Crayon\Subsystems\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Subsystems\Audio\SoundAsset.h">
+      <Filter>Crayon\Subsystems\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Subsystems\ECS\ECS.h">
+      <Filter>Crayon\Subsystems\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Subsystems\Rendering\AllocatedBuffer.h">
+      <Filter>Crayon\Subsystems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Subsystems\Rendering\DescriptorSlot.h">
+      <Filter>Crayon\Subsystems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Subsystems\Rendering\Pipeline.h">
+      <Filter>Crayon\Subsystems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Subsystems\Rendering\RenderableLine.h">
+      <Filter>Crayon\Subsystems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Subsystems\Rendering\Renderer.h">
+      <Filter>Crayon\Subsystems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Subsystems\Rendering\RenderingSettings.h">
+      <Filter>Crayon\Subsystems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Subsystems\Rendering\Sprite.h">
+      <Filter>Crayon\Subsystems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Crayon\Subsystems\Rendering\TextureIdentifier.h">
+      <Filter>Crayon\Subsystems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Components\DespawnProjectileComponent.h">
+      <Filter>Game\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Components\InvaderMovementComponent.h">
+      <Filter>Game\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Components\ProjectileSpawningComponent.h">
+      <Filter>Game\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enums\CollisionType.h">
+      <Filter>Game\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Events\ProjectileHitEvent.h">
+      <Filter>Game\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Systems\DespawnProjectileSystem.h">
+      <Filter>Game\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Systems\InvaderSystem.h">
+      <Filter>Game\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Systems\PlayerSystem.h">
+      <Filter>Game\Systems</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Crayon\ComponentsAndSystems\Components\SoundComponent.cpp">
+      <Filter>Crayon\ComponentsAndSystems\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\ComponentsAndSystems\Systems\AnimationSystem.cpp">
+      <Filter>Crayon\ComponentsAndSystems\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\ComponentsAndSystems\Systems\AudioSystem.cpp">
+      <Filter>Crayon\ComponentsAndSystems\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\ComponentsAndSystems\Systems\CollisionSystem.cpp">
+      <Filter>Crayon\ComponentsAndSystems\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\ComponentsAndSystems\Systems\PhysicsSystem.cpp">
+      <Filter>Crayon\ComponentsAndSystems\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\Core\CoreTypes\Rect.cpp">
+      <Filter>Crayon\Core\CoreTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\Core\LoggingAndProfiling\Profiler.cpp">
+      <Filter>Crayon\Core\LoggingAndProfiling</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\Core\Timing\Timer.cpp">
+      <Filter>Crayon\Core\Timing</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\Core\WindowAndInput\Window.cpp">
+      <Filter>Crayon\Core\WindowAndInput</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\Editor\ShaderManager.cpp">
+      <Filter>Crayon\Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\GameInstance.cpp">
+      <Filter>Crayon</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\Libraries\imgui\imgui.cpp">
+      <Filter>Crayon\Libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\Libraries\imgui\imgui_demo.cpp">
+      <Filter>Crayon\Libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\Libraries\imgui\imgui_draw.cpp">
+      <Filter>Crayon\Libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\Libraries\imgui\imgui_impl_vulkan.cpp">
+      <Filter>Crayon\Libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\Libraries\imgui\imgui_impl_win32.cpp">
+      <Filter>Crayon\Libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\Libraries\imgui\imgui_tables.cpp">
+      <Filter>Crayon\Libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\Libraries\imgui\imgui_widgets.cpp">
+      <Filter>Crayon\Libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\Subsystems\Audio\AudioPlayer.cpp">
+      <Filter>Crayon\Subsystems\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\Subsystems\ECS\ECS.cpp">
+      <Filter>Crayon\Subsystems\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="Crayon\Subsystems\Rendering\Renderer.cpp">
+      <Filter>Crayon\Subsystems\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\main.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

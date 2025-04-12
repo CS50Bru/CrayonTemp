@@ -1,0 +1,88 @@
+// STANDARD HEADER BEGINS
+#version 450
+#extension GL_EXT_mesh_shader : require
+#extension GL_EXT_nonuniform_qualifier : enable
+// STANDARD HEADER ENDS
+
+// Specify workgroup size
+layout(local_size_x = 1) in;
+
+// Specify output: 4 vertices, 2 triangles
+layout(triangles, max_vertices = 4, max_primitives = 2) out;
+
+//DESCRIPTOR INFORMATION BEGINS
+// Define our DescriptorSet inputs
+layout( set = 0, binding = 0, std140 ) uniform UniformBufferObject
+{
+	mat4 model;
+	mat4 view;
+	mat4 proj;
+} ubo;
+layout( set = 1, binding = 0 ) uniform sampler2D texSampler[];
+layout( set = 2, binding = 0, rgba8 ) readonly uniform image2D stagingImages[];
+//DESCRIPTOR INFORMATION ENDS
+
+// Define our push constant input
+layout(push_constant) uniform Push
+{
+    vec2 offset; // the position of the sprite in the gameworld
+    vec2 origin; // where in the texture are we starting from?
+    vec2 extent; // how much of the texture do you want to use (both x and y)?
+    vec2 scale; 
+    uint textureID;
+    float rotation;
+} push;
+
+// Define our outputs
+layout(location = 0) out vec2 fragTexCoord[]; // Per-vertex output for fragment shader
+
+void main()
+{
+    // Get texture size for scaling
+    vec2 textureSize = vec2(textureSize(texSampler[push.textureID], 0));
+    float xSize = push.extent.x * push.scale.x * textureSize.x;
+    float ySize = push.extent.y * push.scale.y * textureSize.y;
+
+    // Generate local-space vertices (scaled)
+    vec2 verticesScaledLocalSpace[4] = vec2[] (
+        vec2(-0.5 * xSize, -0.5 * ySize), // top-left
+        vec2(0.5 * xSize, -0.5 * ySize),  // top-right
+        vec2(0.5 * xSize, 0.5 * ySize),   // bottom-right
+        vec2(-0.5 * xSize, 0.5 * ySize)   // bottom-left
+    );
+
+    // Generate rotation matrix
+    mat4 rotationMatrix = mat4(
+        cos(push.rotation), -sin(push.rotation), 0, 0,
+        sin(push.rotation), cos(push.rotation), 0, 0,
+        0, 0, 1, 0,
+        0, 0, 0, 1
+    );
+
+    // Transform vertices to model space (apply rotation and offset)
+    vec4 verticesModelSpace[4];
+    for (int i = 0; i < 4; i++) {
+        verticesModelSpace[i] = (vec4(verticesScaledLocalSpace[i], 0.0, 1.0) * rotationMatrix) + vec4(push.offset, 0.0, 0.0);
+        gl_MeshVerticesEXT[i].gl_Position = ubo.proj * verticesModelSpace[i]; // Apply projection directly
+    }
+
+    // Define texture coordinates (matching vertex shader)
+    vec2 uvCoordinates[4] = vec2[] (
+        vec2(push.origin),                          // top-left
+        vec2(push.origin.x + push.extent.x, push.origin.y), // top-right
+        vec2(push.origin.x + push.extent.x, push.origin.y + push.extent.y), // bottom-right
+        vec2(push.origin.x, push.origin.y + push.extent.y)  // bottom-left
+    );
+
+    // Assign texture coordinates to each vertex
+    for (int i = 0; i < 4; i++) {
+        fragTexCoord[i] = uvCoordinates[i];
+    }
+
+    // Set the number of vertices and primitives
+    SetMeshOutputsEXT(4, 2);
+
+    // Define the two triangles
+    gl_PrimitiveTriangleIndicesEXT[0] = uvec3(0, 1, 3); // First triangle: top-left, top-right, bottom-left
+    gl_PrimitiveTriangleIndicesEXT[1] = uvec3(1, 2, 3); // Second triangle: top-right, bottom-right, bottom-left
+}
